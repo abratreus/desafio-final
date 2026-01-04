@@ -41,6 +41,32 @@
  
 // Bons estudos 😉
 
+class hero{
+    constructor(nome,idade,tipo){
+        this.nome = nome
+        this.idade = idade
+        this.tipo = tipo
+    }
 
+    verifyType(tipo){
+        switch(tipo){
+            case "mago":
+                return "magia"
+            case "guerreiro":
+                return "espada"
+            case "monge":
+                return "artes marciais"
+            case "ninja":
+                return "shuriken"
+        }
+    }
 
-console.log(`o ${tipo} atacou usando ${ataque}`)
+    write(){
+        let ataque = this.verifyType(this.tipo), tipo = this.tipo        
+        console.log(`o ${tipo} atacou usando ${ataque}`)
+    }
+}
+
+let alfredo = new hero("alfredo", 20, "guerreiro")
+
+alfredo.write()
